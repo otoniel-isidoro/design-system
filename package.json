@@ -25,7 +25,8 @@
     "release": "dotenv yarn build & yarn typescript:generate && auto shipit",
     "storybook": "start-storybook -p 6006 -s .storybook/static",
     "typescript:check": "tsc --project ./tsconfig.json --noEmit",
-    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap"
+    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap",
+    "test": "jest --config ./jest.config.ts"
   },
   "husky": {
     "hooks": {
@@ -79,16 +80,26 @@
     "@storybook/eslint-config-storybook": "^2.4.0",
     "@storybook/linter-config": "^2.5.0",
     "@storybook/react": "^6.2.0",
+    "@testing-library/dom": "^8.10.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/fs-extra": "^9.0.1",
+    "@types/jest": "^27.0.2",
     "auto": "^9.50.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.3.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "chromatic": "^5.0.0",
     "cross-env": "^7.0.2",
     "dotenv-cli": "^3.1.0",
     "eslint": "^7.1.0",
+    "eslint-plugin-jest-dom": "^3.9.2",
+    "eslint-plugin-testing-library": "^5.0.0",
     "husky": "^4.2.5",
+    "jest": "^27.3.1",
+    "jest-stare": "^2.3.0",
     "lint-staged": "^10.2.9",
     "node-fetch": "^2.6.0",
     "prettier": "^2.3.0",
@@ -97,6 +108,7 @@
     "seedrandom": "^3.0.5",
     "sort-package-json": "^1.44.0",
     "ts-loader": "^7.0.5",
+    "ts-node": "^10.4.0",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
@@ -116,6 +128,9 @@
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/storybook"
+  },
+  "jest-stare": {
+    "coverageLink": "../coverage/lcov-report/index.html"
   },
   "storybook": {
     "title": "Storybook Design System",
