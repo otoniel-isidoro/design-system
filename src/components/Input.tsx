@@ -352,7 +352,7 @@ export const PureInput: FC<Props & ComponentProps<typeof InputEl>> = forwardRef(
   }
 );
 
-interface Props {
+export interface Props {
   id: string;
   value?: string;
   appearance?: 'default' | 'pill' | 'code' | 'tertiary';

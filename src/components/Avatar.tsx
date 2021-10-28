@@ -109,6 +109,11 @@ const Initial = styled.div<Partial<Props>>`
   `}
 `;
 
+export const editImage: Function = () => {
+  console.log('edit image');
+  // ...
+};
+
 /**
  * The `Avatar` component is where all your avatars come to play.
  */
@@ -118,6 +123,7 @@ export const Avatar: FunctionComponent<Props> = ({
   src = null,
   size = 'medium',
   type = AvatarType.USER,
+  onClick = editImage(),
   ...props
 }: Props) => {
   let avatarFigure = (
@@ -140,16 +146,25 @@ export const Avatar: FunctionComponent<Props> = ({
   }
 
   return (
-    <Image size={size} isLoading={isLoading} src={src} type={type} {...a11yProps} {...props}>
+    <Image
+      size={size}
+      isLoading={isLoading}
+      src={src}
+      type={type}
+      onClick={onClick}
+      {...a11yProps}
+      {...props}
+    >
       {avatarFigure}
     </Image>
   );
 };
 
-interface Props {
+export interface Props {
   isLoading?: boolean;
   /** The name of the user (not the nice name) */
   username?: string;
+  onClick?: Function;
   src?: string;
   /** Specify size */
   size?: keyof typeof sizes;
