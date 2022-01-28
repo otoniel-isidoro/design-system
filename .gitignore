@@ -25,3 +25,6 @@ yarn-error.log*
 
 # we use yarn
 package-lock.json
+
+coverage
+jest-stare
