@@ -27,7 +27,8 @@
     "release": "dotenv yarn build & yarn typescript:generate && auto shipit",
     "storybook": "yarn patch-package && start-storybook -p 6006 -s .storybook/static",
     "typescript:check": "tsc --project ./tsconfig.json --noEmit",
-    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap"
+    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap",
+    "test": "jest --config ./jest.config.ts"
   },
   "husky": {
     "hooks": {
@@ -83,17 +84,26 @@
     "@storybook/linter-config": "^2.5.0",
     "@storybook/react": "^6.3.8",
     "@svgr/cli": "^6.1.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/fs-extra": "^9.0.1",
+    "@types/jest": "^27.4.0",
     "auto": "^9.50.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.4.6",
     "babel-loader": "^8.1.0",
     "babel-plugin-emotion": "^10.2.2",
     "chromatic": "^5.0.0",
     "cross-env": "^7.0.2",
     "dotenv-cli": "^3.1.0",
     "eslint": "^7.1.0",
+    "eslint-plugin-jest-dom": "^4.0.1",
     "eslint-plugin-storybook": "^0.3.3",
+    "eslint-plugin-testing-library": "^5.0.3",
     "husky": "^4.2.5",
+    "jest": "^27.4.7",
+    "jest-stare": "^2.3.0",
     "lint-staged": "^10.2.9",
     "node-fetch": "^2.6.0",
     "patch-package": "^6.4.7",
@@ -103,6 +113,7 @@
     "seedrandom": "^3.0.5",
     "sort-package-json": "^1.51.0",
     "ts-loader": "^7.0.5",
+    "ts-node": "^10.4.0",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {

@@ -18,7 +18,10 @@
     "types": [],
     "lib": ["es2017", "dom"]
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "./jest-setup.ts"
+  ],
   "exclude": [
     "**/dist",
     "**/test.*",
